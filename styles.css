@@ -794,7 +794,6 @@ strong { font-weight: var(--fw-semi); color: var(--color-white); }
   overflow:       hidden;
 }
 
-
 /* ------ RIGHT: Admission Form ------ */
 .hero__form-wrapper {
   position:   sticky;
