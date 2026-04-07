@@ -794,15 +794,7 @@ strong { font-weight: var(--fw-semi); color: var(--color-white); }
   overflow:       hidden;
 }
 
-.hero__img-placeholder::before {
-  content:    '📸';
-  position:   absolute;
-  font-size:  3rem;
-  opacity:    0.15;
-  top:        50%;
-  left:       50%;
-  transform:  translate(-50%, -60%);
-}
+
 
 /* ------ RIGHT: Admission Form ------ */
 .hero__form-wrapper {

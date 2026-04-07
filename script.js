@@ -1,22 +1,3 @@
-/**
- * script.js
- * B.Sc Visual Communication — AI Ready Animation & VFX Designer
- * Rathinam College of Arts & Science × Raise Smart
- *
- * Interactions covered:
- * 01. Sticky Navbar — scroll effect + active link highlighting
- * 02. Mobile Menu — hamburger toggle
- * 03. Smooth Scroll — nav link clicks
- * 04. Scroll Animations — IntersectionObserver for fade-in
- * 05. Counter Animation — stats bar number counting
- * 06. Form Validation — admission form client-side validation
- * 07. Video Player — lazy YouTube embed on play
- * 08. Back to Top — visibility + smooth scroll
- * 09. Staggered animation delay — via data-delay attribute
- *
- * Author: RankUHigher
- * Standards: Vanilla JS, no dependencies, ES6+, accessible
- */
 
 'use strict';
 
