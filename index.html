@@ -18,9 +18,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
 
   <!-- ============================================================
-       ICONS — Phosphor Icons (lightweight, clean)
+       ICONS — Font Awesome 6 (reliable on all devices incl. mobile)
        ============================================================ -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <!-- ============================================================
        STYLESHEET
@@ -60,6 +60,7 @@
           <li><a href="#highlights"        class="navbar__link">Program Highlights</a></li>
           <li><a href="#gip"               class="navbar__link">GIP</a></li>
           <li><a href="#contact"           class="navbar__link">Contact</a></li>
+          <li><a href="tel:+917669109660" class="footer__contact-link"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 76691 09660</a></li>
         </ul>
       </nav>
 
@@ -124,27 +125,27 @@
           <!-- Key Highlights strip -->
           <ul class="hero__highlights" role="list">
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-certificate" aria-hidden="true"></i>
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
               <span>6 Global Certifications</span>
             </li>
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-globe" aria-hidden="true"></i>
+              <i class="fa-solid fa-globe" aria-hidden="true"></i>
               <span>International Immersion</span>
             </li>
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-laptop" aria-hidden="true"></i>
+              <i class="fa-solid fa-laptop" aria-hidden="true"></i>
               <span>Laptop + Camera Kit</span>
             </li>
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-identification-badge" aria-hidden="true"></i>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;display:inline-block;vertical-align:middle;"><path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm6.26 0H24v21.248z"/></svg>
               <span>Adobe CC License</span>
             </li>
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-briefcase" aria-hidden="true"></i>
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
               <span>Industry Internships</span>
             </li>
             <li class="hero__highlight-item">
-              <i class="ph-bold ph-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
               <span>Skill Passport</span>
             </li>
           </ul>
@@ -170,7 +171,7 @@
               <div class="form-group">
                 <label class="form-label" for="studentName">Full Name <span class="form-required" aria-hidden="true">*</span></label>
                 <div class="form-input-wrap">
-                  <i class="ph ph-user" aria-hidden="true"></i>
+                  <i class="fa-regular fa-user" aria-hidden="true"></i>
                   <input
                     type="text"
                     id="studentName"
@@ -189,7 +190,7 @@
               <div class="form-group">
                 <label class="form-label" for="studentPhone">Phone Number <span class="form-required" aria-hidden="true">*</span></label>
                 <div class="form-input-wrap">
-                  <i class="ph ph-phone" aria-hidden="true"></i>
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
                   <input
                     type="tel"
                     id="studentPhone"
@@ -209,7 +210,7 @@
               <div class="form-group">
                 <label class="form-label" for="studentEmail">Email Address <span class="form-required" aria-hidden="true">*</span></label>
                 <div class="form-input-wrap">
-                  <i class="ph ph-envelope" aria-hidden="true"></i>
+                  <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                   <input
                     type="email"
                     id="studentEmail"
@@ -228,7 +229,7 @@
               <div class="form-group">
                 <label class="form-label" for="courseInterest">Course Interest <span class="form-required" aria-hidden="true">*</span></label>
                 <div class="form-input-wrap form-input-wrap--select">
-                  <i class="ph ph-graduation-cap" aria-hidden="true"></i>
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
                   <select
                     id="courseInterest"
                     name="courseInterest"
@@ -244,26 +245,21 @@
                     <option value="aidesign">AI-Powered Creative Design</option>
                     <option value="all">Complete B.Sc Visual Communication</option>
                   </select>
-                  <i class="ph ph-caret-down form-select-arrow" aria-hidden="true"></i>
+                  <i class="fa-solid fa-chevron-down form-select-arrow" aria-hidden="true"></i>
                 </div>
                 <span class="form-error" id="courseError" role="alert"></span>
               </div>
 
               <!-- Submit -->
               <button type="submit" class="btn btn--submit" id="submitBtn">
-                <span class="btn-text">Apply Now — Free</span>
-                <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+                <span class="btn-text">Apply Now</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </button>
-
-              <p class="admission-form__note">
-                <i class="ph ph-lock-simple" aria-hidden="true"></i>
-                Your information is 100% secure and private.
-              </p>
             </form>
 
             <!-- Success Message (hidden by default) -->
             <div class="form-success" id="formSuccess" aria-live="polite" hidden>
-              <i class="ph-bold ph-check-circle" aria-hidden="true"></i>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
               <h3>Application Received!</h3>
               <p>Our admissions team will reach out to you within 24 hours.</p>
             </div>
@@ -328,7 +324,7 @@
           <!-- 1. SSCP -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="0">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--teal">
-              <i class="ph-bold ph-certificate" aria-hidden="true"></i>
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
               <span class="deliverable-card__sno">01</span>
             </div>
             <div class="deliverable-card__body">
@@ -346,7 +342,7 @@
           <!-- 2. SIIP -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="80">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--orange">
-              <i class="ph-bold ph-factory" aria-hidden="true"></i>
+              <i class="fa-solid fa-industry" aria-hidden="true"></i>
               <span class="deliverable-card__sno">02</span>
             </div>
             <div class="deliverable-card__body">
@@ -366,7 +362,7 @@
           <!-- 3. FEP -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="160">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--blue">
-              <i class="ph-bold ph-map-pin" aria-hidden="true"></i>
+              <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
               <span class="deliverable-card__sno">03</span>
             </div>
             <div class="deliverable-card__body">
@@ -384,7 +380,7 @@
           <!-- 4. OLT -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="240">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--purple">
-              <i class="ph-bold ph-compass" aria-hidden="true"></i>
+              <i class="fa-solid fa-compass" aria-hidden="true"></i>
               <span class="deliverable-card__sno">04</span>
             </div>
             <div class="deliverable-card__body">
@@ -401,7 +397,7 @@
           <!-- 5. GIP -->
           <article class="deliverable-card deliverable-card--featured" data-animate="fade-up" data-delay="320">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--gold">
-              <i class="ph-bold ph-globe-hemisphere-east" aria-hidden="true"></i>
+              <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
               <span class="deliverable-card__sno">05</span>
             </div>
             <div class="deliverable-card__body">
@@ -418,7 +414,7 @@
           <!-- 6. Microsoft Workgroup Essentials Access -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="400">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--blue">
-              <i class="ph-bold ph-microsoft-excel-logo" aria-hidden="true"></i>
+              <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
               <span class="deliverable-card__sno">06</span>
             </div>
             <div class="deliverable-card__body">
@@ -433,7 +429,7 @@
           <!-- 7. Laptop Provision -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="480">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--teal">
-              <i class="ph-bold ph-laptop" aria-hidden="true"></i>
+              <i class="fa-solid fa-laptop" aria-hidden="true"></i>
               <span class="deliverable-card__sno">07</span>
             </div>
             <div class="deliverable-card__body">
@@ -451,7 +447,7 @@
           <!-- 8. Camera KIT -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="560">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--orange">
-              <i class="ph-bold ph-camera" aria-hidden="true"></i>
+              <i class="fa-solid fa-camera" aria-hidden="true"></i>
               <span class="deliverable-card__sno">08</span>
             </div>
             <div class="deliverable-card__body">
@@ -469,7 +465,7 @@
           <!-- 9. Adobe Licence -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="640">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--red">
-              <i class="ph-bold ph-identification-badge" aria-hidden="true"></i>
+              <i class="fa-solid fa-id-badge" aria-hidden="true"></i>
               <span class="deliverable-card__sno">09</span>
             </div>
             <div class="deliverable-card__body">
@@ -484,7 +480,7 @@
           <!-- 10. Corporate Attire -->
           <article class="deliverable-card" data-animate="fade-up" data-delay="720">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--purple">
-              <i class="ph-bold ph-briefcase" aria-hidden="true"></i>
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
               <span class="deliverable-card__sno">10</span>
             </div>
             <div class="deliverable-card__body">
@@ -501,7 +497,7 @@
           <!-- 11. Fee Exclusions -->
           <article class="deliverable-card deliverable-card--exclusion" data-animate="fade-up" data-delay="800">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--red">
-              <i class="ph-bold ph-warning" aria-hidden="true"></i>
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
               <span class="deliverable-card__sno">11</span>
             </div>
             <div class="deliverable-card__body">
@@ -518,7 +514,7 @@
           <!-- 12. Skill Passport -->
           <article class="deliverable-card deliverable-card--passport" data-animate="fade-up" data-delay="880">
             <div class="deliverable-card__icon-wrap deliverable-card__icon-wrap--gold">
-              <i class="ph-bold ph-identification-card" aria-hidden="true"></i>
+              <i class="fa-solid fa-id-card" aria-hidden="true"></i>
               <span class="deliverable-card__sno">12</span>
             </div>
             <div class="deliverable-card__body">
@@ -568,25 +564,25 @@
             </div>
             <ul class="pricing-card__features" role="list">
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>75–300MM Zoom Lens</strong> — Professional telephoto lens</span>
               </li>
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>7 Days Asian Country</strong> — International immersion trip</span>
               </li>
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>Camera Gimbal</strong> — Professional stabilisation rig</span>
               </li>
               <li class="pricing-card__feature pricing-card__feature--note">
-                <i class="ph ph-info" aria-hidden="true"></i>
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
                 <span>All base programme deliverables (items 1–12) included</span>
               </li>
             </ul>
             <a href="#admission-form" class="btn btn--outline pricing-card__cta">
               Choose This Plan
-              <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
 
@@ -603,25 +599,25 @@
             </div>
             <ul class="pricing-card__features" role="list">
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>75–300MM Zoom Lens</strong> — Professional telephoto lens</span>
               </li>
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>5 Days Europe Country</strong> — Premium international immersion</span>
               </li>
               <li class="pricing-card__feature">
-                <i class="ph-bold ph-check" aria-hidden="true"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span><strong>Camera Gimbal</strong> — Professional stabilisation rig</span>
               </li>
               <li class="pricing-card__feature pricing-card__feature--note">
-                <i class="ph ph-info" aria-hidden="true"></i>
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
                 <span>All base programme deliverables (items 1–12) included</span>
               </li>
             </ul>
             <a href="#admission-form" class="btn btn--primary pricing-card__cta">
               Choose This Plan
-              <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
 
@@ -652,7 +648,7 @@
           <!-- SSCP -->
           <div class="gip-type-card" data-animate="fade-up" data-delay="0">
             <div class="gip-type-card__icon gip-type-card__icon--sscp">
-              <i class="ph-bold ph-certificate" aria-hidden="true"></i>
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
             </div>
             <span class="gip-type-card__code">SSCP</span>
             <span class="gip-type-card__name">Semester Skill Certification Programme</span>
@@ -661,7 +657,7 @@
           <!-- SIIP -->
           <div class="gip-type-card" data-animate="fade-up" data-delay="80">
             <div class="gip-type-card__icon gip-type-card__icon--siip">
-              <i class="ph-bold ph-buildings" aria-hidden="true"></i>
+              <i class="fa-solid fa-building" aria-hidden="true"></i>
             </div>
             <span class="gip-type-card__code">SIIP</span>
             <span class="gip-type-card__name">Semester Industry Immersion Programme</span>
@@ -670,7 +666,7 @@
           <!-- OLT -->
           <div class="gip-type-card" data-animate="fade-up" data-delay="160">
             <div class="gip-type-card__icon gip-type-card__icon--olt">
-              <i class="ph-bold ph-tent" aria-hidden="true"></i>
+              <i class="fa-solid fa-campground" aria-hidden="true"></i>
             </div>
             <span class="gip-type-card__code">OLT</span>
             <span class="gip-type-card__name">Outbound Leadership Training</span>
@@ -679,7 +675,7 @@
           <!-- FEP -->
           <div class="gip-type-card" data-animate="fade-up" data-delay="240">
             <div class="gip-type-card__icon gip-type-card__icon--fep">
-              <i class="ph-bold ph-hard-hat" aria-hidden="true"></i>
+              <i class="fa-solid fa-hard-hat" aria-hidden="true"></i>
             </div>
             <span class="gip-type-card__code">FEP</span>
             <span class="gip-type-card__name">Field Exposure Programme</span>
@@ -688,7 +684,7 @@
           <!-- GIP -->
           <div class="gip-type-card" data-animate="fade-up" data-delay="320">
             <div class="gip-type-card__icon gip-type-card__icon--gip">
-              <i class="ph-bold ph-globe-hemisphere-west" aria-hidden="true"></i>
+              <i class="fa-solid fa-globe" aria-hidden="true"></i>
             </div>
             <span class="gip-type-card__code">GIP</span>
             <span class="gip-type-card__name">Global Immersion Programme</span>
@@ -764,9 +760,9 @@
                 A structured international exposure initiative featuring:
               </p>
               <ul class="gip-detail-card__list" role="list">
-                <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i> Online certification training</li>
-                <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i> Global collaborative project</li>
-                <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i> Physical Global Immersion Visit</li>
+                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Online certification training</li>
+                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Global collaborative project</li>
+                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Physical Global Immersion Visit</li>
               </ul>
               <p class="gip-detail-card__text">…to build <strong>global competence and perspective</strong>.</p>
             </div>
@@ -820,7 +816,7 @@
               <p class="passport-card__tagline">RATHINAM GLOBAL — THE NEXT STANDARD EDUCATION</p>
             </div>
             <div class="passport-card__seal" aria-hidden="true">
-              <i class="ph-bold ph-seal-check"></i>
+              <i class="fa-solid fa-award"></i>
             </div>
           </div>
 
@@ -838,11 +834,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">SSCP</span>
                 <span class="score-row__stars" role="cell" aria-label="5 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -850,11 +846,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">SIIP</span>
                 <span class="score-row__stars" role="cell" aria-label="4 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -862,11 +858,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">GIP (Year 1)</span>
                 <span class="score-row__stars" role="cell" aria-label="3 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -874,11 +870,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">GIP (Year 2)</span>
                 <span class="score-row__stars" role="cell" aria-label="2 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -886,11 +882,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">OLT</span>
                 <span class="score-row__stars" role="cell" aria-label="4 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -898,11 +894,11 @@
               <div class="score-table-row" role="row">
                 <span class="score-row__label" role="cell">FEP</span>
                 <span class="score-row__stars" role="cell" aria-label="4 stars">
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph-fill ph-star" aria-hidden="true"></i>
-                  <i class="ph ph-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 </span>
                 <span class="score-row__yn" role="cell">Y/N</span>
               </div>
@@ -1021,11 +1017,11 @@
           </p>
           <div class="cta-section__actions">
             <a href="#admission-form" class="btn btn--primary btn--large">
-              Apply Now — Free
-              <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+              Apply Now
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="tel:+917669109660" class="btn btn--ghost btn--large">
-              <i class="ph ph-phone-call" aria-hidden="true"></i>
+              <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
               Call Us: +91 76691 09660
             </a>
           </div>
@@ -1061,19 +1057,19 @@
         <!-- Social Icons -->
         <div class="footer__social" aria-label="Social media links">
           <a href="#" class="footer__social-icon" aria-label="Facebook" rel="noopener noreferrer">
-            <i class="ph-bold ph-facebook-logo" aria-hidden="true"></i>
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
           </a>
           <a href="#" class="footer__social-icon" aria-label="Instagram" rel="noopener noreferrer">
-            <i class="ph-bold ph-instagram-logo" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
           <a href="#" class="footer__social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
-            <i class="ph-bold ph-linkedin-logo" aria-hidden="true"></i>
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
           </a>
           <a href="#" class="footer__social-icon" aria-label="YouTube" rel="noopener noreferrer">
-            <i class="ph-bold ph-youtube-logo" aria-hidden="true"></i>
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
           </a>
           <a href="#" class="footer__social-icon" aria-label="X (Twitter)" rel="noopener noreferrer">
-            <i class="ph-bold ph-x-logo" aria-hidden="true"></i>
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -1082,12 +1078,12 @@
       <nav class="footer__col footer__col--links" aria-label="Footer navigation">
         <h3 class="footer__col-title">Quick Links</h3>
         <ul class="footer__links" role="list">
-          <li><a href="#hero"         class="footer__link"><i class="ph ph-house" aria-hidden="true"></i> Home</a></li>
-          <li><a href="#deliverables" class="footer__link"><i class="ph ph-book-open" aria-hidden="true"></i> About Course</a></li>
-          <li><a href="#highlights"   class="footer__link"><i class="ph ph-star" aria-hidden="true"></i> Program Highlights</a></li>
-          <li><a href="#gip"          class="footer__link"><i class="ph ph-globe" aria-hidden="true"></i> GIP</a></li>
-          <li><a href="#skill-passport" class="footer__link"><i class="ph ph-identification-card" aria-hidden="true"></i> Skill Passport</a></li>
-          <li><a href="#contact"      class="footer__link"><i class="ph ph-envelope" aria-hidden="true"></i> Contact Us</a></li>
+          <li><a href="#hero"         class="footer__link"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+          <li><a href="#deliverables" class="footer__link"><i class="fa-solid fa-book-open" aria-hidden="true"></i> About Course</a></li>
+          <li><a href="#highlights"   class="footer__link"><i class="fa-solid fa-star" aria-hidden="true"></i> Program Highlights</a></li>
+          <li><a href="#gip"          class="footer__link"><i class="fa-solid fa-globe aria-hidden="true"></i> GIP</a></li>
+          <li><a href="#skill-passport" class="footer__link"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Skill Passport</a></li>
+          <li><a href="#contact"      class="footer__link"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact Us</a></li>
         </ul>
       </nav>
 
@@ -1096,19 +1092,19 @@
         <h3 class="footer__col-title">Contact</h3>
         <address class="footer__address">
           <p class="footer__contact-item">
-            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
             Rathinam College of Arts &amp; Science, Coimbatore, Tamil Nadu, India
           </p>
           <p class="footer__contact-item">
             <a href="tel:+917669109660" class="footer__contact-link">
-              <i class="ph ph-phone" aria-hidden="true"></i>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               +91 76691 09660
             </a>
           </p>
           <p class="footer__contact-item">
-            <a href="mailto:admissions@rsmartedu.in" class="footer__contact-link">
-              <i class="ph ph-envelope" aria-hidden="true"></i>
-              admissions@rsmartedu.in
+            <a href="/cdn-cgi/l/email-protection#2f4e4b42465c5c4640415c6f5d5c424e5d5b4a4b5a014641" class="footer__contact-link">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span class="__cf_email__" data-cfemail="fa9b9e9793898993959489ba8889979b888e9f9e8fd49394">[email&#160;protected]</span>
             </a>
           </p>
         </address>
@@ -1152,8 +1148,10 @@
        BACK TO TOP BUTTON
        ============================================================ -->
   <button class="back-to-top" id="backToTop" aria-label="Scroll back to top" hidden>
-    <i class="ph-bold ph-arrow-up" aria-hidden="true"></i>
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </button>
+
+
 
   <!-- ============================================================
        JAVASCRIPT
