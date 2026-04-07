@@ -1,39 +1,3 @@
-/* ================================================================
-   STYLES.CSS
-   B.Sc Visual Communication — AI Ready Animation & VFX Designer
-   Rathinam College of Arts & Science × Raise Smart
-
-   Design System: Dark Navy + Gold Accent — Premium Editorial
-   Font Stack: Playfair Display (headings) + DM Sans (body)
-   Author: RankUHigher
-   ================================================================ */
-
-
-/* ----------------------------------------------------------------
-   TABLE OF CONTENTS
-   01. CSS Custom Properties (Design Tokens)
-   02. CSS Reset & Base
-   03. Utility Classes
-   04. Layout — Container & Grid
-   05. Typography Scale
-   06. Animation System
-   07. Components — Buttons
-   08. Components — Section Headers
-   09. Navbar
-   10. Hero Section
-   11. Stats Bar
-   12. Deliverables Section
-   13. Add-Ons / Pricing Section
-   14. GIP Section
-   15. Skill Passport Section
-   16. Video Section
-   17. CTA Section
-   18. Footer
-   19. Back to Top
-   20. Responsive — Tablet (≤ 1024px)
-   21. Responsive — Mobile (≤ 768px)
-   22. Responsive — Small Mobile (≤ 480px)
-   ---------------------------------------------------------------- */
 
 
 /* ================================================================
@@ -47,7 +11,7 @@
   --color-navy-600:      #243047;        /* Border / divider */
   --color-navy-500:      #2E3D5A;        /* Subtle borders */
 
-  --color-gold:          #C9A84C;        /* Primary accent — warm gold */
+  --color-gold:          #F67D36;        /* Primary accent — warm gold */
   --color-gold-light:    #E6C975;        /* Hover / lighter gold */
   --color-gold-pale:     #F5E6BB;        /* Very light gold tint */
 
