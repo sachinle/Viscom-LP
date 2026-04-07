@@ -422,18 +422,6 @@ function clamp(value, min, max) {
     submitBtn.disabled = true;
     btnText.textContent = 'Submitting…';
 
-    /**
-     * Simulated form submission.
-     * Replace the setTimeout below with an actual fetch() call
-     * to your backend/CRM endpoint.
-     *
-     * Example:
-     * fetch('/api/admissions', {
-     *   method: 'POST',
-     *   headers: { 'Content-Type': 'application/json' },
-     *   body: JSON.stringify(formData)
-     * }).then(handleSuccess).catch(handleError);
-     */
     setTimeout(() => {
       // Collect form data for logging (not sent anywhere without backend)
       const formData = new FormData(form);
@@ -537,12 +525,7 @@ function clamp(value, min, max) {
    09. STAGGERED ANIMATION — APPLY DELAY FROM data-delay ATTRIBUTE
    ================================================================ */
 (function applyAnimationDelays() {
-  /**
-   * The CSS already has fixed delay classes mapped to specific ms values
-   * (e.g. [data-delay="80"] { transition-delay: 80ms; }).
-   * This function dynamically adds transition-delay via inline style
-   * for any delays not covered by CSS, ensuring full flexibility.
-   */
+
   document.querySelectorAll('[data-delay]').forEach((el) => {
     const delay = parseInt(el.dataset.delay, 10);
     if (!isNaN(delay)) {
@@ -557,10 +540,7 @@ function clamp(value, min, max) {
    ================================================================ */
 (function initAccessibility() {
 
-  /**
-   * Ensure that clicking "Apply Now" buttons that link to #admission-form
-   * focus the first input in the form for a smoother UX.
-   */
+
   const applyNowLinks = document.querySelectorAll('a[href="#admission-form"]');
   applyNowLinks.forEach((link) => {
     link.addEventListener('click', () => {
@@ -589,10 +569,7 @@ function clamp(value, min, max) {
    11. NAVBAR LINK — AUTO-CLOSE MOBILE MENU ON INTERNAL NAV
    ================================================================ */
 (function mobileNavAutoClose() {
-  /**
-   * Already handled within initMobileMenu(), but this ensures
-   * any dynamically added mobile links also close the menu.
-   */
+ 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', () => {
       const mobileMenu   = document.getElementById('mobileMenu');
@@ -608,12 +585,3 @@ function clamp(value, min, max) {
     });
   });
 })();
-
-
-/* ================================================================
-   INIT LOG
-   ================================================================ */
-console.info(
-  '%c✅ Rathinam × Raise Smart — Landing Page Loaded',
-  'color: #C9A84C; font-weight: bold; font-size: 14px;'
-);
