@@ -855,7 +855,8 @@ strong { font-weight: var(--fw-semi); color: var(--color-white); }
 
 .stats-bar__list {
   display:             grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+justify-content: center;
   gap:                 var(--space-8);
   text-align:          center;
 }
