@@ -227,47 +227,57 @@ function clamp(value, min, max) {
   
 })();
 
-
 /* ================================================================
-   05. COUNTER ANIMATION — STATS BAR
-   ================================================================ */
+    05. ANIMATED COUNTERS — WITH RANGE SUPPORT
+    ================================================================ */ 
+
 (function initCounters() {
-  /**
-   * Animates number counters from 0 to their target value.
-   * Each counter element must have:
-   *   - data-count="<number>"     (the target number)
-   *   - data-suffix="<string>"    (optional suffix e.g. "+", " Days")
-   */
   const counterEls = document.querySelectorAll('[data-count]');
   if (!counterEls.length) return;
 
-  // Ease-out easing function
-  function easeOutQuart(t) {
-    return 1 - Math.pow(1 - t, 4);
-  }
-
-  /**
-   * Run the count-up animation for a single element.
-   * @param {HTMLElement} el
-   */
   function animateCounter(el) {
-    const target   = parseInt(el.dataset.count, 10);
+    const rawValue = el.dataset.count;
     const suffix   = el.dataset.suffix || '';
-    const duration = 1800; // ms
+    const duration = 1800;
     const startTime = performance.now();
+
+    // RANGE SUPPORT
+    if (rawValue.includes('-')) {
+      const [start, end] = rawValue.split('-').map(Number);
+
+      function step(currentTime) {
+        const elapsed  = currentTime - startTime;
+        const progress = Math.min(Math.max(elapsed / duration, 0), 1);
+
+        const currentStart = Math.round(start * progress);
+        const currentEnd   = Math.round(end * progress);
+
+        el.textContent = `${currentStart} - ${currentEnd}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = `${start} - ${end}${suffix}`;
+        }
+      }
+
+      requestAnimationFrame(step);
+      return;
+    }
+
+    // NORMAL NUMBER
+    const target = parseInt(rawValue, 10);
 
     function step(currentTime) {
       const elapsed  = currentTime - startTime;
-      const progress = clamp(elapsed / duration, 0, 1);
-      const eased    = easeOutQuart(progress);
-      const current  = Math.round(eased * target);
+      const progress = Math.min(Math.max(elapsed / duration, 0), 1);
 
+      const current  = Math.round(target * progress);
       el.textContent = current + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
-        // Ensure final value is accurate
         el.textContent = target + suffix;
       }
     }
@@ -275,26 +285,21 @@ function clamp(value, min, max) {
     requestAnimationFrame(step);
   }
 
-  // Use IntersectionObserver to trigger on first view
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  // 🔥 Trigger when visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
 
-  counterEls.forEach((el) => {
-    el.textContent = '0'; // Reset display to 0 on load
-    counterObserver.observe(el);
+  counterEls.forEach(el => {
+    el.textContent = el.dataset.count.includes('-') ? '0 - 0' : '0';
+    observer.observe(el);
   });
 })();
-
-
 /* ================================================================
    06. FORM VALIDATION — ADMISSION FORM
    ================================================================ */

@@ -101,8 +101,8 @@
           </h1>
 
           <p class="hero__subtitle">
-            Certified AI Ready<br />
-            <strong>Animation &amp; VFX Designer</strong>
+            <span style="color: white;">Certified AI Ready</span><br />
+            <strong>Animation &amp; VFX Designer <span style="color: white;">With GIP</span></strong>
           </p>
 
           <p class="hero__description">
@@ -148,93 +148,35 @@
         </div>
 
         <!-- RIGHT: Admission Form -->
-        <div class="hero__form-wrapper" id="admission-form" data-animate="fade-left">
-          <div class="admission-card">
-            <div class="admission-card__header">
-              <h2 class="admission-card__title">Begin Your Journey</h2>
-              <p class="admission-card__subtitle">Admissions open — Limited seats available</p>
-              <span class="admission-card__badge">2025–26 Batch</span>
-            </div>
-            <div class="npf_wgts" data-height="400px" data-w="847dbc8fd0b65f5e4badda6b84c235b2">
-            <form class="admission-form" id="admissionForm" novalidate aria-label="Admission enquiry form">
+<div class="hero__form-wrapper" id="admission-form" data-animate="fade-left">
+  <div class="admission-card">
 
-              <!-- Name -->
-              <div class="form-group">
-                <label class="form-label" for="studentName">Full Name <span class="form-required" aria-hidden="true">*</span></label>
-                <div class="form-input-wrap">
-                  <i class="fa-regular fa-user" aria-hidden="true"></i>
-                  <input
-                    type="text"
-                    id="studentName"
-                    name="studentName"
-                    class="form-input"
-                    placeholder="Enter your full name"
-                    required
-                    autocomplete="name"
-                    aria-required="true"
-                  />
-                </div>
-                <span class="form-error" id="nameError" role="alert"></span>
-              </div>
+    <!-- Dark header stays as-is -->
+    <div class="admission-card__header">
+      <h2 class="admission-card__title">Begin Your Journey</h2>
+      <p class="admission-card__subtitle">Admissions open — Limited seats available</p>
+      <span class="admission-card__badge">2026–27 Batch</span>
+    </div>
 
-              <!-- Phone -->
-              <div class="form-group">
-                <label class="form-label" for="studentPhone">Phone Number <span class="form-required" aria-hidden="true">*</span></label>
-                <div class="form-input-wrap">
-                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                  <input
-                    type="tel"
-                    id="studentPhone"
-                    name="studentPhone"
-                    class="form-input"
-                    placeholder="+91 XXXXX XXXXX"
-                    required
-                    autocomplete="tel"
-                    aria-required="true"
-                    pattern="[0-9+\s\-]{8,15}"
-                  />
-                </div>
-                <span class="form-error" id="phoneError" role="alert"></span>
-              </div>
+    <!-- ✅ Third-party widget — white bg applied via .npf_wgts selector above -->
+    <div class="npf_wgts" data-height="400px" data-w="847dbc8fd0b65f5e4badda6b84c235b2"></div>
 
-              <!-- Email -->
-              <div class="form-group">
-                <label class="form-label" for="studentEmail">Email Address <span class="form-required" aria-hidden="true">*</span></label>
-                <div class="form-input-wrap">
-                  <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                  <input
-                    type="email"
-                    id="studentEmail"
-                    name="studentEmail"
-                    class="form-input"
-                    placeholder="your@email.com"
-                    required
-                    autocomplete="email"
-                    aria-required="true"
-                  />
-                </div>
-                <span class="form-error" id="emailError" role="alert"></span>
-              </div>
+    <!-- ✅ OR if using your own form — wrap in admission-form-inner -->
+    <!-- <div class="admission-form-inner">
+      <form class="admission-form" id="admissionForm" novalidate aria-label="Admission enquiry form">
+        ... your form fields ...
+      </form>
+    </div> -->
 
-              
+    <!-- Success Message -->
+    <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <h3>Application Received!</h3>
+      <p>Our admissions team will reach out to you within 24 hours.</p>
+    </div>
 
-              <!-- Submit -->
-              <button type="submit" class="btn btn--submit" id="submitBtn">
-                <span class="btn-text">Apply Now</span>
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </button>
-            </form>
-            </div>
-
-            <!-- Success Message (hidden by default) -->
-            <div class="form-success" id="formSuccess" aria-live="polite" hidden>
-              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-              <h3>Application Received!</h3>
-              <p>Our admissions team will reach out to you within 24 hours.</p>
-            </div>
-          </div>
-
-        </div>
+  </div>
+</div>
 
       </div><!-- /.hero__inner -->
     </section>
@@ -255,17 +197,10 @@
             <span class="stats-bar__number" data-count="3">0</span>
             <span class="stats-bar__label">Years Programme</span>
           </li>
-          <li class="stats-bar__item" data-animate="fade-up" data-delay="200">
-            <span class="stats-bar__number" data-count="5" data-suffix="+">0</span>
-            <span class="stats-bar__label">Programme Types</span>
-          </li>
+          
           <li class="stats-bar__item" data-animate="fade-up" data-delay="300">
-            <span class="stats-bar__number" data-count="7" data-suffix=" Days">0</span>
+            <span class="stats-bar__number" data-count="3-5" data-suffix=" Days">0 - 0</span>
             <span class="stats-bar__label">International Immersion</span>
-          </li>
-          <li class="stats-bar__item" data-animate="fade-up" data-delay="400">
-            <span class="stats-bar__number" data-count="12">0</span>
-            <span class="stats-bar__label">Course Deliverables</span>
           </li>
         </ul>
       </div>
@@ -503,98 +438,7 @@
     </section>
     <!-- /DELIVERABLES -->
 
-    <!-- ----------------------------------------------------------
-         SECTION 4: ADD-ONS / PRICING
-         ---------------------------------------------------------- -->
-    <section class="addons" id="addons" aria-labelledby="addonsTitle">
-      <div class="addons__bg" aria-hidden="true"></div>
-      <div class="container">
-
-        <div class="section-header section-header--light" data-animate="fade-up">
-          <span class="section-eyebrow section-eyebrow--light">Upgrade Your Experience</span>
-          <h2 class="section-title section-title--light" id="addonsTitle">
-            Premium <em>Add-Ons</em>
-          </h2>
-          <p class="section-subtitle section-subtitle--light">
-            Choose the tier that takes your creative career to the next level.
-          </p>
-        </div>
-
-        <div class="addons__grid">
-
-          <!-- Plan A — ₹2,50,000 -->
-          <div class="pricing-card" data-animate="fade-up" data-delay="0">
-            <div class="pricing-card__header">
-              <span class="pricing-card__plan">Asian Immersion</span>
-              <div class="pricing-card__price">
-                <span class="pricing-card__currency">₹</span>
-                <span class="pricing-card__amount">2,50,000</span>
-                <span class="pricing-card__period">/ year</span>
-              </div>
-            </div>
-            <ul class="pricing-card__features" role="list">
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>75–300MM Zoom Lens</strong> — Professional telephoto lens</span>
-              </li>
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>7 Days Asian Country</strong> — International immersion trip</span>
-              </li>
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>Camera Gimbal</strong> — Professional stabilisation rig</span>
-              </li>
-              <li class="pricing-card__feature pricing-card__feature--note">
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span>All base programme deliverables (items 1–12) included</span>
-              </li>
-            </ul>
-            <a href="#admission-form" class="btn btn--outline pricing-card__cta">
-              Apply Now
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-
-          <!-- Plan B — ₹3,00,000 (Featured) -->
-          <div class="pricing-card pricing-card--featured" data-animate="fade-up" data-delay="150">
-            <div class="pricing-card__badge">Most Popular</div>
-            <div class="pricing-card__header">
-              <span class="pricing-card__plan">Europe Elite</span>
-              <div class="pricing-card__price">
-                <span class="pricing-card__currency">₹</span>
-                <span class="pricing-card__amount">3,00,000</span>
-                <span class="pricing-card__period">/ year</span>
-              </div>
-            </div>
-            <ul class="pricing-card__features" role="list">
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>75–300MM Zoom Lens</strong> — Professional telephoto lens</span>
-              </li>
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>5 Days Europe Country</strong> — Premium international immersion</span>
-              </li>
-              <li class="pricing-card__feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                <span><strong>Camera Gimbal</strong> — Professional stabilisation rig</span>
-              </li>
-              <li class="pricing-card__feature pricing-card__feature--note">
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span>All base programme deliverables (items 1–12) included</span>
-              </li>
-            </ul>
-            <a href="#admission-form" class="btn btn--primary pricing-card__cta">
-              Apply Now
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-
-        </div><!-- /.addons__grid -->
-      </div>
-    </section>
-    <!-- /ADD-ONS -->
+   
 
     <!-- ----------------------------------------------------------
          SECTION 5: GIP — GLOBAL IMMERSION PROGRAMME
@@ -1072,9 +916,9 @@
             </a>
           </p>
           <p class="footer__contact-item">
-            <a href="/cdn-cgi/l/email-protection#2f4e4b42465c5c4640415c6f5d5c424e5d5b4a4b5a014641" class="footer__contact-link">
+            <a href="mailto:admissions@rsmartedu.in" class="footer__contact-link">
               <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-              <span class="__cf_email__" data-cfemail="fa9b9e9793898993959489ba8889979b888e9f9e8fd49394">[email&#160;protected]</span>
+              <span>admissions@rsmartedu.in</span>
             </a>
           </p>
         </address>
